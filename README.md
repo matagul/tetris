@@ -14,12 +14,15 @@ Oyunu başlatmak için:
 
 ```bash
 python -m src.main
+main
 ```
 
 ## Güncelleme Geçmişi
 
 - Ilk sürüm: temel dosya yapısı oluşturuldu.
 - Paket yapısı düzenlendi ve import sorunu giderildi.
+
+main
 
 ## Derleme
 
