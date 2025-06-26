@@ -12,9 +12,15 @@ pip install -r requirements.txt
 
 Oyunu başlatmak için:
 
+Windows:
 ```bash
-python -m src.main
-main
+set PYTHONPATH=src
+python -m main
+```
+Linux/Mac:
+```bash
+export PYTHONPATH=src
+python -m main
 ```
 
 ## Güncelleme Geçmişi
@@ -22,10 +28,15 @@ main
 - Ilk sürüm: temel dosya yapısı oluşturuldu.
 - Paket yapısı düzenlendi ve import sorunu giderildi.
 
-main
-
 ## Derleme
 
 `deploy.bat` betiği PyInstaller kullanarak Windows için tek bir `exe` dosyası
-üretir. Android ve iOS için paketleme için Kivy/Buildozer gibi araçlar
+üretir. Derlemeden önce aşağıdaki gibi çalıştırabilirsiniz:
+
+```bat
+set PYTHONPATH=src
+pyinstaller --onefile --name Tetris src/main.py
+```
+
+Android ve iOS için paketleme için Kivy/Buildozer gibi araçlar
 yüklenebilir.

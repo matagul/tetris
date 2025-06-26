@@ -1,0 +1,40 @@
+# How to Deploy Tetris (One-File Executable)
+
+## Windows (PC) - One-File EXE
+
+1. Make sure you have Python 3.8+ and pip installed.
+2. Install requirements:
+   pip install -r requirements.txt
+3. Install PyInstaller:
+   pip install pyinstaller
+4. Open a terminal in the project root.
+5. Run the following command:
+   set PYTHONPATH=src && pyinstaller --onefile --name Tetris src/main.py
+6. The single EXE will be in the dist/ folder as Tetris.exe.
+7. Double-click Tetris.exe to play!
+
+## Android (APK) - One-File App
+
+- Use Kivy and Buildozer (Python to APK):
+  1. Install Kivy and Buildozer (see https://kivy.org/doc/stable/guide/packaging-android.html)
+  2. Adapt main.py to use Kivy's App class and touch controls.
+  3. Run: buildozer init
+  4. Edit buildozer.spec (set requirements: pygame, etc.)
+  5. Run: buildozer -v android debug
+  6. APK will be in bin/ folder. Install on your device.
+
+## iOS (IPA) - One-File App
+
+- Use Kivy and Xcode (Python to IPA):
+  1. Install Kivy and Xcode (see https://kivy.org/doc/stable/guide/packaging-ios.html)
+  2. Adapt main.py to use Kivy's App class and touch controls.
+  3. Use toolchain to build:
+     toolchain create Tetris src/main.py
+     toolchain build Tetris
+     toolchain install Tetris
+  4. Archive and export IPA via Xcode.
+
+## Notes
+- For best results, use the provided resources in src/tetris/resources/.
+- For Android/iOS, you may need to adapt input (touch controls) and screen size.
+- For Windows, everything is bundled in one EXE, just double-click to play. 

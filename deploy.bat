@@ -1,7 +1,9 @@
 @echo off
-REM Bu betik PyInstaller ile oyunu tek bir exe haline getirir.
-REM PyInstaller yüklü olmalıdır.
+REM Deploy Tetris as a single EXE with all resources included
+REM Make sure you have Python and PyInstaller installed
+REM Usage: Double-click this file
 
-pyinstaller --onefile --name Tetris src/main.py
+set PYTHONPATH=src
+pyinstaller --onefile --name Tetris src/main.py --add-data "src/tetris/resources;src/tetris/resources"
 
 pause
