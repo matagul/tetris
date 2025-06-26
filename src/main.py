@@ -1,6 +1,7 @@
 """Tetris oyununun giris noktasi."""
 
-from tetris.game import TetrisGame
+from .tetris.game import TetrisGame
+main
 
 
 def main():

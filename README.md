@@ -13,14 +13,16 @@ pip install -r requirements.txt
 Oyunu başlatmak için:
 
 ```bash
-python src/main.py
+python -m src.main
+main
 ```
 
 ## Güncelleme Geçmişi
 
 - Ilk sürüm: temel dosya yapısı oluşturuldu.
 - Paket yapısı düzenlendi ve import sorunu giderildi.
-- `src/main.py` mutlak import kullanacak şekilde güncellendi.
+
+main
 
 ## Derleme
 
